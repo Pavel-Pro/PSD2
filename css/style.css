@@ -25,13 +25,13 @@
 	font-style: normal;
 }
 @font-face {
-	font-family: Roboto Black;
+	font-family: "Roboto Black";
 	src: url(../fonts/Roboto-Black.woff);
 	font-weight: 600;
 	font-style: normal;
 }
 @font-face {
-	font-family: Roboto Light;
+	font-family: "Roboto Light";
 	src: url(../fonts/Roboto-Light.woff);
 	font-weight: 300;
 	font-style: normal;
@@ -40,14 +40,21 @@
 	box-sizing: border-box;
 	-webkit-tap-highlight-color: transparent;
 }
+button:focus, button:active {
+	outline: none;
+}
+/*Обозначение переменных*/
 :root { 
 --main-text-color: rgb(255, 255, 255);
 --next-text-color: rgb(65, 61, 75);
---btn-color: rgb(0, 224, 208);
+--btn-text: rgb(0, 224, 208);
+--btn-border: rgb(0, 224, 208);
 --font-main: "Roboto Light", sans-serif;
 --font-title: "PlayfairDisplay Bold";
---bgcolor: rgb(52, 42, 85, 0.8);
+--bg-color: rgb(52, 42, 85, 0.8);
+--btn-font: "HammersmithOne Regular";
 }
+/*Конец*/
 .body {
 	font-size: 14px;
 	font-family: var(--font-main);
@@ -58,12 +65,13 @@
 	max-width: 940px;
 	margin: 0 auto;
 }
+/*Первый экран с слайдером*/
 .main {
 	background-image: url(../images/banner.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center center;
-	background-color: var(--bgcolor);
+	background-color: var(--bg-color);
 	background-blend-mode: darken;
 	height: 100vh;
 }
@@ -71,11 +79,145 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	min-height: 70px;
 }
 .nav__items {
 	list-style-type: none;
 	display: flex;
 }
+.nav__item {
+	margin-left: 1.8em;
+}
 .menu__link {
 	display: block;
+	font-family: "Roboto Black";
+	font-size: 13px;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: var(--main-text-color);
+	transition-duration: 0.7s;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+}
+.menu__link:hover {
+	color: var(--btn-text);
+	letter-spacing: 0.1em;
+	transform: translate(5,0px);
+}
+.main__title {
+	text-align: center;
+	color: var(--main-text-colot);
+	font-family: "PlayfairDisplay Bold";
+	font-size: 32px;
+	margin-top: 160px;
+	margin-bottom: 60px;
+	position: relative;
+}
+.main__title::after {
+	content: " ";
+	height: 1px;
+	width: 50px;
+	background-color: rgb(0, 224, 208);
+	position: absolute;
+    top: 60px;
+    left: 47%;
+}
+.main__text {
+	text-align: center;
+	color: var(--main-text-color);
+	font-family: "Roboto Light";
+	font-size: 16px;
+	max-width: 770px;
+	margin: 0 auto;
+	line-height: 20px;
+	margin-bottom: 5em;
+}
+.main__button {
+	color: var(--btn-text);
+	background: transparent;
+	border: 1px solid var(--btn-border);
+	margin: 0 auto;
+	padding: 0.8em 1.5em;
+	font-size: 16px;
+	font-family: var(--btn-font);
+	text-transform: uppercase;
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
+	transition: 0.9s all ease;
+	position: relative;
+}
+.main__button:before {
+	content: " ";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: var(--btn-border);
+	transform: translate(-50%,-50%) rotate(45deg);
+	width: 100%;
+	height: 0em;
+	z-index: -1;
+	transition: 1s all ease;
+}
+.main__button:hover {
+	color: white;
+	transform: scale(1.1);
+}
+.main__button:hover:before {
+	height: 9em;
+}
+.story {
+	background-color: rgb(255, 255, 255);
+}
+.story__items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 400px;
+}
+.story__item {
+	display: flex;
+	flex-flow: column;
+	min-height: 260px;
+	justify-content: space-between;
+}
+.story__item:first-child {
+	margin-right: 6.3em;
+}
+.title {
+	font-family: var(--font-title);
+	text-transform: uppercase;
+	color: var(--next-text-color);
+	text-align: center;
+	font-size: 22px;
+	flex: 1;
+}
+.story__text {
+	color: var(--next-text-color);
+	font-family: var(--font-main);
+	flex: 1;
+}
+.story__btn {
+	margin: 0 auto 0 0;
+}
+.video {
+	background-image: url(..//images/video-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-color: var(--bg-color);
+	background-blend-mode: darken;
+	min-height: 550px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.video__icon {
+	margin-bottom: 2em;
+}
+.video__text {
+	text-transform: uppercase;
+	font-family: "Roboto Black";
+	color: var(--main-text-color);
 }
