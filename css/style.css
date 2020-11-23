@@ -60,6 +60,7 @@ button:focus, button:active {
 	font-family: var(--font-main);
 	background-color: rgb(255, 255, 255);
 	color: var(--main-text-color);
+	width: 100%;
 }
 .wrapper {
 	max-width: 940px;
@@ -104,6 +105,19 @@ button:focus, button:active {
 	letter-spacing: 0.1em;
 	transform: translate(5,0px);
 }
+.burger-nav {
+	max-height: 50px;
+	max-width: 50px;
+	cursor: pointer;
+	display: none;
+}
+.burger-nav__item {
+	width: 30px;
+	height: 4px;
+	background-color: var(--btn-text);
+	margin-bottom: 4px;
+	display: block;
+}
 .main__title {
 	text-align: center;
 	color: var(--main-text-colot);
@@ -113,7 +127,7 @@ button:focus, button:active {
 	margin-bottom: 60px;
 	position: relative;
 }
-.main__title::after {
+.main__title:after {
 	content: " ";
 	height: 1px;
 	width: 50px;
@@ -180,6 +194,7 @@ button:focus, button:active {
 	flex-flow: column;
 	min-height: 260px;
 	justify-content: space-between;
+	align-items: flex-start;
 }
 .story__item:first-child {
 	margin-right: 6.3em;
@@ -220,4 +235,171 @@ button:focus, button:active {
 	text-transform: uppercase;
 	font-family: "Roboto Black";
 	color: var(--main-text-color);
+}
+.expertise__title {
+	margin: 5em 0 1.4em 0;
+}
+.expertise__text {
+	color: var(--next-text-color);
+	text-align: center;
+	font-family: "PlayfairDisplay Regular";
+	position: relative;
+}
+.expertise__text:after {
+	content: " ";
+	height: 2px;
+	width: 50px;
+	background-color: rgb(198, 196, 201);
+	position: absolute;
+    top: 2.5em;
+    left: 47%;
+}
+.expertise__items {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin-top: 7em;
+	margin-bottom: 7em;
+}
+.expertise__item {
+	height: 250px;
+	flex-basis: 33%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-right: 1px solid rgb(198, 196, 201);
+	border-bottom: 1px solid rgb(198, 196, 201);
+}
+.expertise__item:nth-child(3n) {
+	border-right: none;
+}
+.expertise__item:nth-child(1n+4) {
+	border-bottom: none;
+}
+.expertise__item-icon {
+	margin: 2.3em 0;
+}
+.expertise__item-title {
+	color: var(--next-text-color);
+	font-family: "Roboto Black";
+	text-transform: uppercase;
+	margin-top: auto;
+}
+.expertise__item-text {
+	color: var(--next-text-color);
+	font-family: var(--font-main);
+	text-align: center;
+	margin: 1.5em 2em 3em 2em;
+}
+.team {
+	background-image: url(..//images/team-bg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	background-color: var(--bg-color);
+	background-blend-mode: darken;
+	height: 85vh;
+}
+.team__title {
+	text-align: center;
+	color: var(--main-text-color);
+	text-transform: uppercase;
+	font-family: var(--font-title);
+	font-size: 22px;
+	padding-top: 5em;
+	word-spacing: 0.1em;
+	letter-spacing: 0.1em;
+}
+.team__text {
+	text-align: center;
+	color: var(--main-text-color);
+	font-family: "PlayfairDisplay Regular";
+	font-size: 14px;
+	margin-top: 1em;
+	margin-bottom: 5em;
+	word-spacing: 0.1;
+	position: relative;
+}
+.team__text:after {
+	content: " ";
+	height: 2px;
+	width: 50px;
+	background-color: rgb(198, 196, 201, 0.7);
+	position: absolute;
+    top: 2.5em;
+    left: 47%;
+}
+.team__items {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.team__item {
+	margin-right: 1.4em;
+	border: 1px solid rgb(198, 196, 201, 0.7);
+}
+.team__item:last-child {
+	margin-right: 0;
+}
+.team__item-title {
+	text-align: center;
+	margin-top: 1.2em;
+	margin-bottom: 0.9em;
+	text-transform: uppercase;
+	font-family: "Roboto Black";
+}
+.team__item-text {
+	text-align: center;
+	text-transform: uppercase;
+	font-family: var(--font-main);
+	font-size: 13px;
+	margin-bottom: 1.8em;
+}
+.team__text-bottom {
+	text-align: center;
+	font-family: var(--font-main);
+	margin-top: 5em;
+	margin-bottom: 2em;
+}
+@media (max-width: 980px) {
+	.main {
+		height: 65vh;
+	}
+	.wrapper {
+		margin: 0 3em;
+	}
+	.nav__items {
+		display: none;
+	}
+	.burger-nav {
+		max-height: 50px;
+		max-width: 50px;
+		cursor: pointer;
+		display: block;
+	}
+	.team {
+		height: 120vh;
+	}
+	.team__title {
+		padding-top: 3.5em;
+		word-spacing: 0.1em;
+		letter-spacing: 0.1em;
+	}
+	.team__items {
+		flex-wrap: wrap;
+	}
+	.team__item {
+		flex: 1 1 33%;
+		height: 450px;
+	}
+	.team__photo {
+		width: 100%;
+		height: 80%;
+	}
+	.team__item:nth-child(2n){
+		margin-right: 0;
+	}
+	.team__item:nth-child(-n + 2){
+		margin-bottom: 3em;
+	}
 }
