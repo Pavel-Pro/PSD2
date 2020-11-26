@@ -376,8 +376,14 @@ button:focus, button:active {
 	.wrapper {
 		margin: 0 3em;
 	}
+	.nav {
+		position: relative;
+	}
 	.nav__items {
 		display: none;
+		position: absolute;
+		top: 0;
+		right: 55%
 	}
 	.burger-nav {
 		max-height: 50px;
