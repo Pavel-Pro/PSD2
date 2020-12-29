@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="fontawesome-free-5.12.1-web//css/all.min.css">
 	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/jquery-ui.css">
@@ -142,10 +142,126 @@
 		</div>
 	</section>
 	<section class="works">
-		
+		<div class="works__wrap">
+			<h2 class="title works__title">our works</h2>
+			<a href="#" class="works__link">See All Project in dribbble</a>
+		</div>
+		<div class="gellery">
+			<div class="works-img__wrap"><img src="images/works1.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works3.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works4.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works2.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works3.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works1.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works3.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works2.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works3.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works4.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works1.png" alt="works" class="works__img"></div>
+			<div class="works-img__wrap"><img src="images/works2.png" alt="works" class="works__img"></div>
+		</div>
+		<button class="main__button works__btn">load more</button>
+	</section>
+	<section class="bq">
+		<div class="bq__container">
+			<p class="bq__text">
+				This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat consequat auctor eu in elit.
+			</p>
+			<h4 class="bq__name">jane galadriel</h4>
+			<p class="bq__position">ceo tengkurep</p>
+			<img src="images/photo_1.png" alt="person__photo" class="bq__photo">
+		</div>
+	</section>
+	<section class="contact">
+		<div class="wrapper">
+			<div class="contact__items">
+				<div class="contect__item">
+					<h2 class="title contact__title">give us a good news</h2>
+					<form action="post" class="contact__form">
+						<input type="text" class="form__name" name="name" placeholder="Name" id="" required>
+						<input type="email" name="email" class="form__email" placeholder="Email" required>
+						<input name="subject" class="form__subject" placeholder="Subject" required>
+						<textarea name="massage" rows="20"cols="40" class="form__massage" placeholder="Your massage"></textarea>
+						<button tyoe="submit" class="main__button form__btn">submit</button>
+					</form>
+				</div>
+				<div class="contect__item">
+					<h2 class="title contact__title">our happy client</h2>
+					<div class="clients__items">
+						<div class="clients__item-left">
+							<img src="images/client_1.png" alt="" class="client__logo">
+							<img src="images/client_2.png" alt="" class="client__logo">
+							<img src="images/client_3.png" alt="" class="client__logo">
+							<img src="images/client_4.png" alt="" class="client__logo">
+							<img src="images/client_5.png" alt="" class="client__logo">
+						</div>
+						<div class="clients__item-right">
+							<img src="images/client_6.png" alt="" class="client__logo">
+							<img src="images/client_7.png" alt="" class="client__logo">
+							<img src="images/client_8.png" alt="" class="client__logo">
+							<img src="images/client_9.png" alt="" class="client__logo">
+							<img src="images/client_10.png" alt="" class="client__logo">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</section>
 	<footer class="footer">
-		
+		<div class="wrapper">
+			<div class="footer__items">
+				<div class="footer__item">
+					<img src="images/logo.png" alt="logo" class="footer_logo">
+					<p class="footer__text">
+						lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare odio non mauris vitae erat in elit
+					</p>
+				</div>
+				<div class="footer__item">
+					<h3 class="title footer__title">our studio</h3>
+					<div class="footer__contact">
+						<i class="fas fa-map-marker-alt"></i>
+						<p class="footer__adress">
+							Ruko cucruk, Jl. Radio luar dalem jos No.12 - 13, Kalideres - Jakarta Barat 11480 - Indonesia
+						</p>
+					</div>
+					<div class="footer__contact">
+						<i class="fas fa-phone"></i>
+						<p class="footer__phone">(+62) 21-2224 3333</p>
+					</div>
+				</div>
+				<div class="footer__item">
+					<h3 class="title footer__title">stay in touch</h3>
+					<form action="" class="form-subscribe">
+						<input type="email" class="form-subscribe__email" placeholder="Subscribe our newsletter" required>
+						<button type="submit" class="form-subscribe__btn">
+							<img src="images/send_icon.png" alt="send" class="send__logo">
+						</button>
+					</form>
+					<div class="footer__social">
+						<a href="#" class="footer__social-link"><i class="fab fa-facebook-f social__icon"></i></a>
+						<a href="#" class="footer__social-link"><i class="fab fa-twitter social__icon"></i></a>
+						<a href="#" class="footer__social-link"><i class="fab fa-dribbble social__icon"></i></a>
+						<a href="#" class="footer__social-link"><i class="fab fa-instagram-square social__icon"></i></a>
+						<a href="#" class="footer__social-link"><i class="fab fa-google-plus-g social__icon"></i></a>
+						<a href="#" class="footer__social-link"><i class="fab fa-youtube social__icon"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="footer-bottom__items">
+					<ul class="footer-bottom__item">
+						<li class="footer-bottom__item"><a href="#" class="footer-bottom__link">help</a></li>
+						<li class="footer-bottom__item"><a href="#" class="footer-bottom__link">terms & condition</a></li>
+						<li class="footer-bottom__item"><a href="#" class="footer-bottom__link">privacy</a></li>
+					</ul>
+					<div class="footer-bottom__item">
+						<div class="footer-bottom__copy">
+							Copyright © 2015 - Tajem Creative
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</footer>
 <script src="js/jQueryMigrate141.js"></script>
 <script src="js/jquery-351.js"></script>
