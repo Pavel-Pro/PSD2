@@ -714,6 +714,13 @@ button:focus, button:active {
 	.works__btn {
 		margin: 3.5em auto;
 	}
+	.contact__items {
+		margin: 3.5em 0;
+	}
+	.contect__item:first-child {
+		margin-right: 5em;
+	}
+
 }
 @media(max-width: 800px) {
 	.story__item:first-child {
@@ -957,9 +964,14 @@ button:focus, button:active {
 		margin: 2em 0;
 	}
 }
-@media(max-height: 700px) {
+@media(max-height: 850px) {
 	.team {
-		height: 200vh;
+		height: 170vh;
+	}
+}
+@media(max-height: 740px) {
+	.team {
+		height: 190vh;
 	}
 }
 @media(max-width: 360px) {
