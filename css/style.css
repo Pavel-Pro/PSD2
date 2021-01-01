@@ -785,6 +785,16 @@ button:focus, button:active {
 	.works-img__wrap {
 		flex: 1 1 25%;
 	}
+	.contact__items {
+		flex-direction: column;
+	}
+	.contect__item:first-child {
+		margin-right: 0;
+		order: 2;
+	}
+	.contact__item:last-child {
+		order: 1;
+	}
 @media(max-width: 650px) {
 	.body {
 	font-size: 12px;
