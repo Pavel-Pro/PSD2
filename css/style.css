@@ -1112,9 +1112,13 @@ button:focus, button:active {
 	.team {
 		height: 190vh;
 	}
+@media(max-height: 670px) {
+	.team {
+		height: 205vh;
+	}
 }
 @media(max-width: 360px) {
 	.team {
-		height: 210vh;
+		height: 235vh;
 	}
 }
